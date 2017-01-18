@@ -6,10 +6,14 @@
 	background-size: cover;
 	
 }
-  #header-nav {
+  .header{
   background-color: #f4f2f4;
-    z-index: 0.5;
+    z-index: 9999;
+      width: 100%;
     
+}
+.navbar-toggle .icon-bar {
+    background-color: rgba(111, 19, 19, 0.24);
 }
 body{
     font-family: 'lato',sans-serif;
@@ -33,7 +37,12 @@ section{
 }
 
 hr{
-	width: 200px;
+    border: none;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    width: 260px;
+    height: 7px;
+    background: rgba(51, 51, 51, 0.21)
 	}
 
 /**border color and hr color**/
@@ -45,11 +54,16 @@ hr{
 	font-weight: 300;
 	letter-spacing: 3px;
 }
+/*
 .section-heading hr{
 	border-color: #873fb5;
+   
+    border-radius: 50%;
+}
+*/
 }
 /******************
-progressbar
+Progress Bar
 /***************************/
 
 #skills .progress{
@@ -69,7 +83,7 @@ progressbar
 	margin-left: 20px;
 }
 
-/µ*************************/
+/*************************/
 
 
 /**************************************************/
@@ -96,7 +110,7 @@ body, html{
 
 
 #home {
-	background: url(../images/bg1.jpg) no-repeat center center;
+	background: url(../images/skill.jpg) no-repeat center center;
 	-webkit-background-attachment: fixed;
     background-attachment: fixed;
 	background-color: #222;
@@ -130,6 +144,8 @@ body, html{
 }
 
 .intro h1{
+    letter-spacing: 1px;
+    font-family: 'Lobster';
 	font-size: 60px;
 	line-height: 80px;
 	margin-bottom: 16px;
@@ -139,19 +155,14 @@ body, html{
 	color: #68c3a3;
 }
 .intro p{
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
 	color: #f7f7f7;
 	margin-bottom: 40px;
 }
 
-.intro-sub {
-	color: #fff;
-	font-size: 24px;
-	line-height: 32px;
-	font-weight: 700;
-	text-transform: uppercase;
-	display: block;
-	margin-bottom: 20px;
-}
+
 
 
 /* Link style
@@ -466,6 +477,13 @@ Resume Timeline
     color: #2c3e50;
     top: 0;
     float: left;
+   background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.15), rgb(0, 0, 75));
+    border-radius: 100%;
+    padding: 35px;
+}
+.timeline>li .posted-date .month#union{
+        width: 1px;
+    height: 2px;
 }
 
 .timeline>li.timeline-inverted>.timeline-panel {
@@ -558,7 +576,7 @@ Resume Timeline
 .timeline>li .timeline-panel::before,
 .timeline>li.timeline-inverted .timeline-panel::before {
     content: "";
-    top: 25px;
+    top: 70px;
     position: absolute;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
@@ -591,7 +609,7 @@ Resume Timeline
 .timeline>li .timeline-panel::after,
 .timeline>li.timeline-inverted .timeline-panel::after {
     content: "";
-    top: 25px;
+    top: 70px;
     position: absolute;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
@@ -656,6 +674,10 @@ Resume Timeline
 .portfolio {
     position: relative;
     overflow: hidden;
+}
+.portfolio>img{
+    height: 250px;
+    width: 400px;
 }
 
 
@@ -791,56 +813,14 @@ Resume Timeline
     font-weight: 700;
     margin: 0;
 }
-
-
-/*PopUp fade effect*/
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  /* ideally, transition speed should match zoom duration */
-  -webkit-transition: all 0.3s ease-out; 
-  -moz-transition: all 0.3s ease-out; 
-  -o-transition: all 0.3s ease-out; 
-  transition: all 0.3s ease-out;
-}
-
-.mfp-with-zoom.mfp-ready .mfp-container {
-    opacity: 1;
-}
-.mfp-with-zoom.mfp-ready.mfp-bg {
-    opacity: 0.8;
-}
-
-.mfp-with-zoom.mfp-removing .mfp-container, 
-.mfp-with-zoom.mfp-removing.mfp-bg {
-  opacity: 0;
-}
-
-
-/*
-Icon for all respective meta
-====================================== */
-.the-author::before{
-    content: "\f044";
-}
-.the-time::before{
-    content: "\f133";
-}
-.the-share::before{
-    content: "\f1e0";
-}
-.the-comments::before{
-    content: "\f0e6";
-}
 /* FOOTER */
 footer
 {
-    background: url(../images/bg1.jpg) no-repeat center center;
+    background: url(../images/image04.jpg) no-repeat ;
 	-webkit-background-attachment: fixed;
     background-attachment: fixed;
 	background-size: cover;
-	
+  background-position: top right;
     padding: 20px 0 40px;
 }
 footer .glyphicon
